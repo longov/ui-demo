@@ -1,0 +1,17 @@
+{
+  "cxxNamespace": ["coin98_sdkui"],
+  "ios": {
+    "iosModuleName": "SdkUi"
+  },
+  "android": {
+    "androidNamespace": ["coin98","sdkui"],
+    "androidCxxLibName": "coin98_sdkui"
+  },
+  "autolinking": {
+    "SdkUi": {
+      "swift": "SdkUi",
+      "kotlin": "SdkUi"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}
