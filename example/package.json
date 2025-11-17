@@ -10,9 +10,12 @@
     "build:ios": "react-native build-ios --mode Debug"
   },
   "dependencies": {
+    "@react-native/normalize-colors": "^0.82.1",
     "react": "19.1.0",
     "react-native": "0.81.4",
-    "react-native-nitro-modules": "^0.31.6"
+    "react-native-edge-to-edge": "^1.7.0",
+    "react-native-nitro-modules": "^0.31.6",
+    "react-native-unistyles": "^3.0.17"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

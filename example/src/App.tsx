@@ -1,20 +1,42 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from '@coin98/sdk-ui';
+//@ts-nocheck
 
-const result = multiply(3, 7);
+import { Pressable, View } from 'react-native';
+import { Typography } from '@coin98/sdk-ui';
+import { StyleSheet, UnistylesRuntime } from 'react-native-unistyles';
+import { COLORS } from '../../src/Styles';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Typography color={COLORS.TEXT_BRAND} isBold value={1.5}>
+        Keyboard insets
+      </Typography>
+      <Pressable onPress={() => UnistylesRuntime.setTheme('light')}>
+        <Typography color={COLORS.TEXT} isBold value={1.5}>
+          light Theme
+        </Typography>
+      </Pressable>
+      <Pressable onPress={() => UnistylesRuntime.setTheme('dark')}>
+        <Typography color={COLORS.TEXT} isBold value={1.5}>
+          dark Theme
+        </Typography>
+      </Pressable>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create((theme: any, rt) => ({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    backgroundColor: theme.colors.backgroundColor,
+    paddingHorizontal: theme.gap(2),
+    paddingTop: rt.insets.top,
+    transform: [
+      {
+        translateY: rt.insets.ime * -1,
+      },
+    ],
   },
-});
+}));
