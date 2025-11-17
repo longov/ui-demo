@@ -28,7 +28,6 @@ import FONTS_SIZE from './fontSize';
 import FONTS_WEIGHT from './fontWeight';
 import { ESpacing } from './spacing';
 // @ts-ignore
-import { StyleSheet } from 'react-native-unistyles';
 
 //Enum for the different TextStyles
 export enum TEXT_TITLE {
@@ -81,25 +80,6 @@ export const COLORS = {
 };
 
 export { FONTS_SIZE, FONTS_WEIGHT, ESpacing };
-
-// export const heightFooter = height(ios ? (isIphoneX ? 9 : 7.5) : 7.5);
-// export const heightNavBar = height(ios ? (isIphoneX ? 12.5 : 11.5) : 11.5);
-// export const topNavBarIOS = height(ios ? (isIphoneX ? 4 : 1.5) : 1.5);
-// // export const heightSearchBar = height(4.5)
-// // New design = 48/844 * 100;
-// export const heightSearchBar = height(5.68);
-// export const androidNavbarHeight = ios
-//   ? 0
-//   : Dimensions.get('screen').height - Dimensions.get('window').height;
-// export const paddingButtonBottom = isIphoneX ? 0 : ios ? height(2) : height(3);
-//
-export const THEME_MODE = { light: 'light', dark: 'dark' };
-export const backgroundBlurStyle = StyleSheet.create({
-  dark: { backgroundColor: 'rgba(37,37,37,0.9)' },
-  light: { backgroundColor: 'rgba(229, 229, 229, 0.9)' },
-  darkMore: { backgroundColor: 'rgba(37,37,37,0.9)' },
-  lightMore: { backgroundColor: 'rgba(245, 245, 245, 0.9)' },
-});
 
 export const Colors = {
   //New Colors
