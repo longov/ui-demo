@@ -15,14 +15,14 @@ export const PROCESS_COLORS: Record<
   dark: {
     [EProcess.CIRCLE_TRACK_FILL]: Colors.white_a10,
     [EProcess.BAR_ON_BACKGROUND_TRACK_FILL]: Colors.white_a10,
-    [EProcess.ON_BACKGROUND_INDICATOR]: Colors.y40,
+    [EProcess.ON_BACKGROUND_INDICATOR]: Colors.yellow_40,
     [EProcess.BAR_TRACK_FILL]: Colors.white_a10,
-    [EProcess.PROGRESS_INDICATOR]: Colors.y40,
+    [EProcess.PROGRESS_INDICATOR]: Colors.yellow_40,
   },
   light: {
     [EProcess.CIRCLE_TRACK_FILL]: Colors.white_a10,
     [EProcess.BAR_ON_BACKGROUND_TRACK_FILL]: Colors.white_a10,
-    [EProcess.ON_BACKGROUND_INDICATOR]: Colors.y40,
+    [EProcess.ON_BACKGROUND_INDICATOR]: Colors.yellow_40,
     [EProcess.BAR_TRACK_FILL]: Colors.white_a10,
     [EProcess.PROGRESS_INDICATOR]: Colors.black_a10,
   },

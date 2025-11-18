@@ -6,7 +6,7 @@ export enum EToast {
 
 export const TOAST = {
   dark: {
-    [EToast.TOAST_FILL]: Colors.ng90,
+    [EToast.TOAST_FILL]: Colors.gray_90,
   },
   light: {
     [EToast.TOAST_FILL]: Colors.white_a100,

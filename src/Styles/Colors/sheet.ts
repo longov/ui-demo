@@ -9,12 +9,12 @@ export enum EBottomSheet {
 
 export const SHEET_COLORS = {
   dark: {
-    [EBottomSheet.LAYER_STACK_FILL]: Colors.ng90,
+    [EBottomSheet.LAYER_STACK_FILL]: Colors.gray_90,
     [EBottomSheet.BOTTOM_SHEET_FILL]: BACKGROUND.dark[EBackground.BACKGROUND_2],
     [EBottomSheet.BOTTOM_SHEET_HANDLE_FILL]: Colors.white_a10,
   },
   light: {
-    [EBottomSheet.LAYER_STACK_FILL]: Colors.ng10,
+    [EBottomSheet.LAYER_STACK_FILL]: Colors.gray_10,
     [EBottomSheet.BOTTOM_SHEET_FILL]:
       BACKGROUND.light[EBackground.BACKGROUND_1],
     [EBottomSheet.BOTTOM_SHEET_HANDLE_FILL]: Colors.black_a10,

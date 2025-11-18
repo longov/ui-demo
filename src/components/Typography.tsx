@@ -1,46 +1,60 @@
 //@ts-nocheck
 import React from 'react';
 import type { PropsWithChildren } from 'react';
-import { Text } from 'react-native';
+import { Text, type TextStyle } from 'react-native';
 // @ts-ignore
 import { StyleSheet } from 'react-native-unistyles';
 // @ts-ignore
 import type { UnistylesVariants } from 'react-native-unistyles';
+import EFontSize from '../Styles/fontSize';
+import { EText } from '../Styles/Colors';
+import { ELetterSpacing } from '../Styles/letterSpacing';
 
 interface TypographyProps
   extends PropsWithChildren,
     UnistylesVariants<typeof styles> {
-  value: number;
+  type:
+    | 'tiny'
+    | '3xsmall'
+    | '2xsmall'
+    | 'xsmall'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'xlarge'
+    | '2xlarge'
+    | '3xlarge';
   color?: string;
+  isStrong?: boolean;
+  isCentered?: boolean;
+  style?: UnistylesValues<TextStyle>;
 }
 
 export const Typography: React.FunctionComponent<TypographyProps> = ({
   children,
-  size,
-  isBold = false,
+  type = 'medium',
+  color = EText.TEXT_PRIMARY,
   isCentered = false,
-  isPrimary,
-  value,
-  color,
+  isStrong = false,
+  style,
 }) => {
   styles.useVariants({
-    isBold,
+    type,
+    isStrong,
     isCentered,
-    isPrimary,
-    size,
   });
 
   return (
-    <Text style={[styles.title(value), styles.color(color)]}>{children}</Text>
+    <Text style={[styles.text, styles.color(color), style]}>{children}</Text>
   );
 };
 
 const styles = StyleSheet.create((theme, rt) => ({
-  title: (value: number) => ({
+  text: {
     variants: {
-      isBold: {
+      isStrong: {
         true: {
-          fontWeight: 'bold',
+          fontWeight: '600',
         },
       },
       isCentered: {
@@ -48,36 +62,50 @@ const styles = StyleSheet.create((theme, rt) => ({
           textAlign: 'center',
         },
       },
-      isPrimary: {
-        true: {
-          color: theme.colors.accent,
+      type: {
+        'tiny': {
+          fontSize: rt.fontScale * EFontSize.font_size_100,
+          letterSpacing: ELetterSpacing.normal,
         },
-        default: {
-          color: theme.colors.typography,
+        '3xsmall': {
+          fontSize: rt.fontScale * EFontSize.font_size_125,
+          letterSpacing: ELetterSpacing.normal,
         },
-      },
-      size: {
-        small: {
-          fontSize: rt.fontScale * 10 * value,
+        '2xsmall': {
+          fontSize: rt.fontScale * EFontSize.font_size_150,
+          letterSpacing: ELetterSpacing.normal,
         },
-        large: {
-          fontSize: rt.fontScale * 30 * value,
+        'xsmall': {
+          fontSize: rt.fontScale * EFontSize.font_size_162,
+          letterSpacing: ELetterSpacing.normal,
         },
-        default: {
-          fontSize: rt.fontScale * 20 * value,
+        'small': {
+          fontSize: rt.fontScale * EFontSize.font_size_175,
+          letterSpacing: ELetterSpacing.normal,
+        },
+        'medium': {
+          fontSize: rt.fontScale * EFontSize.font_size_187,
+          letterSpacing: ELetterSpacing.normal,
+        },
+        'large': {
+          fontSize: rt.fontScale * EFontSize.font_size_200,
+          letterSpacing: ELetterSpacing.normal,
+        },
+        'xlarge': {
+          fontSize: rt.fontScale * EFontSize.font_size_225,
+          letterSpacing: ELetterSpacing.normal,
+        },
+        '2xlarge': {
+          fontSize: rt.fontScale * EFontSize.font_size_250,
+          letterSpacing: ELetterSpacing.normal,
+        },
+        '3xlarge': {
+          fontSize: rt.fontScale * EFontSize.font_size_300,
+          letterSpacing: ELetterSpacing.normal,
         },
       },
     },
-    compoundVariants: [
-      {
-        isPrimary: true,
-        isBold: true,
-        styles: {
-          color: theme.colors.TEXT.TEXT,
-        },
-      },
-    ],
-  }),
+  },
   color: (_color: string) => ({
     color: theme.colors.TEXT[_color] || theme.colors.TEXT.TEXT,
   }),

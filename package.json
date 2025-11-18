@@ -10,6 +10,11 @@
       "types": "./lib/typescript/src/index.d.ts",
       "default": "./lib/module/index.js"
     },
+    "./unistyles": {
+      "source": "./src/unistyles.ts",
+      "types": "./lib/typescript/src/unistyles.d.ts",
+      "default": "./lib/module/unistyles.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [

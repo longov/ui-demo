@@ -17,17 +17,17 @@ export enum EBackgroundAvatar {
 
 export const BACKGROUND_AVATAR_COLORS = {
   dark: {
-    [EBackgroundAvatar.AVATAR_BACKGROUND_1]: Colors.ng30,
-    [EBackgroundAvatar.AVATAR_BACKGROUND_2]: Colors.ng100,
-    [EBackgroundAvatar.AVATAR_BACKGROUND_3]: Colors.ng95,
-    [EBackgroundAvatar.AVATAR_BACKGROUND_4]: Colors.ng92,
-    [EBackgroundAvatar.AVATAR_BACKGROUND_5]: Colors.ng90,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_1]: Colors.gray_30,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_2]: Colors.gray_100,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_3]: Colors.gray_95,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_4]: Colors.gray_92,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_5]: Colors.gray_90,
   },
   light: {
-    [EBackgroundAvatar.AVATAR_BACKGROUND_1]: Colors.ng30,
-    [EBackgroundAvatar.AVATAR_BACKGROUND_2]: Colors.ng100,
-    [EBackgroundAvatar.AVATAR_BACKGROUND_3]: Colors.ng95,
-    [EBackgroundAvatar.AVATAR_BACKGROUND_4]: Colors.ng92,
-    [EBackgroundAvatar.AVATAR_BACKGROUND_5]: Colors.ng90,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_1]: Colors.gray_30,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_2]: Colors.gray_100,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_3]: Colors.gray_95,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_4]: Colors.gray_92,
+    [EBackgroundAvatar.AVATAR_BACKGROUND_5]: Colors.gray_90,
   },
 };
