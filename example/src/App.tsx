@@ -30,7 +30,7 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create((theme: any, rt) => ({
+const styles = StyleSheet.create((theme: any, _rt) => ({
   container: {
     flex: 1,
     alignItems: 'flex-start',
