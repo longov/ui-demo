@@ -17,7 +17,7 @@ export default function App() {
       </Pressable>
       <Pressable onPress={() => UnistylesRuntime.setTheme('dark')}>
         <Typography
-          style={styles.text}
+          style={[style1, style2]}
           color={COLORS.TEXT_PRIMARY}
           type={'xlarge'}
           isCentered={true}
@@ -48,3 +48,11 @@ const styles = StyleSheet.create((theme: any, rt) => ({
     color: theme.colors.TEXT.TEXT_ERROR,
   },
 }));
+
+const style1 = {
+  color: 'blue',
+};
+
+const style2 = {
+  fontSize: 22,
+};

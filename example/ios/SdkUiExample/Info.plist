@@ -32,7 +32,7 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -49,5 +49,31 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MiSansLatin-Bold.otf</string>
+		<string>MiSansLatin-Demibold.otf</string>
+		<string>MiSansLatin-ExtraLight.otf</string>
+		<string>MiSansLatin-Heavy.otf</string>
+		<string>MiSansLatin-Light.otf</string>
+		<string>MiSansLatin-Medium.otf</string>
+		<string>MiSansLatin-Normal.otf</string>
+		<string>MiSansLatin-Regular.otf</string>
+		<string>MiSansLatin-Semibold.otf</string>
+		<string>MiSansLatin-Thin.otf</string>
+		<string>SF-Pro-Display-Regular.otf</string>
+		<string>SF-Pro-Display-Semibold.otf</string>
+		<string>MiSansLatin-Bold.ttf</string>
+		<string>MiSansLatin-Demibold.ttf</string>
+		<string>MiSansLatin-ExtraLight.ttf</string>
+		<string>MiSansLatin-Heavy.ttf</string>
+		<string>MiSansLatin-Light.ttf</string>
+		<string>MiSansLatin-Medium.ttf</string>
+		<string>MiSansLatin-Normal.ttf</string>
+		<string>MiSansLatin-Regular.ttf</string>
+		<string>MiSansLatin-Semibold.ttf</string>
+		<string>MiSansLatin-Thin.ttf</string>
+		<string>icomoon.ttf</string>
+	</array>
 </dict>
 </plist>

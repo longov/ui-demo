@@ -1,14 +1,16 @@
 //@ts-nocheck
-import React from 'react';
 import type { PropsWithChildren } from 'react';
-import { Text, type TextStyle } from 'react-native';
-// @ts-ignore
-import { StyleSheet } from 'react-native-unistyles';
+import React from 'react';
+import { Text } from 'react-native';
 // @ts-ignore
 import type { UnistylesVariants } from 'react-native-unistyles';
+// @ts-ignore
+import { StyleSheet } from 'react-native-unistyles';
 import EFontSize from '../Styles/fontSize';
 import { EText } from '../Styles/Colors';
 import { ELetterSpacing } from '../Styles/letterSpacing';
+import { guardUnistyles } from '../Styles/utils';
+import type { UnistylesValues } from 'react-native-unistyles';
 
 interface TypographyProps
   extends PropsWithChildren,
@@ -27,7 +29,7 @@ interface TypographyProps
   color?: string;
   isStrong?: boolean;
   isCentered?: boolean;
-  style?: UnistylesValues<TextStyle>;
+  style?: any;
 }
 
 export const Typography: React.FunctionComponent<TypographyProps> = ({
@@ -44,17 +46,28 @@ export const Typography: React.FunctionComponent<TypographyProps> = ({
     isCentered,
   });
 
+  const isUnistylesStyle = guardUnistyles(style);
+  //
+  // console.log(isUnistylesStyle, '_style');
+
   return (
-    <Text style={[styles.text, styles.color(color), style]}>{children}</Text>
+    <Text style={[styles.text, styles.color(color), isUnistylesStyle]}>
+      {children}
+    </Text>
   );
 };
 
-const styles = StyleSheet.create((theme, rt) => ({
+const styles: UnistylesValues<any> = StyleSheet.create((theme, rt) => ({
   text: {
     variants: {
       isStrong: {
         true: {
-          fontWeight: '600',
+          fontFamily: theme.fonts.families.bold,
+          fontWeight: theme.fonts.weights.bold,
+        },
+        default: {
+          fontFamily: theme.fonts.families.regular,
+          fontWeight: theme.fonts.weights.regular,
         },
       },
       isCentered: {

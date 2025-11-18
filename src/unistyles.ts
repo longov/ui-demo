@@ -1,48 +1,28 @@
 // @ts-nocheck
 import { StyleSheet } from 'react-native-unistyles';
-import { TEXT_COLOR } from './Styles/Colors';
+import { BUTTON_COLORS, TEXT_COLOR } from './Styles/Colors';
+import { FONT_FAMILIES, FONT_WEIGHTS } from './Styles/fonts';
 
-const sharedColors = {
-  barbie: '#ff9ff3',
-  oak: '#1dd1a1',
-  sky: '#48dbfb',
-  fog: '#c8d6e5',
-  aloes: '#00d2d3',
-  blood: '#ff6b6b',
+const sharedFonts = {
+  families: FONT_FAMILIES,
+  weights: FONT_WEIGHTS,
 };
 
 const lightTheme = {
   colors: {
-    ...sharedColors,
-    backgroundColor: '#ffffff',
-    typography: '#000000',
-    accent: sharedColors.blood,
-    test: 'blue',
     TEXT: TEXT_COLOR.light,
+    BUTTON: BUTTON_COLORS.light,
   },
+  fonts: sharedFonts,
   gap: (v: number) => v * 8,
 };
 
 const darkTheme = {
   colors: {
-    ...sharedColors,
-    backgroundColor: '#000000',
-    typography: '#ffffff',
-    accent: sharedColors.barbie,
-    test: 'red',
     TEXT: TEXT_COLOR.dark,
+    BUTTON: BUTTON_COLORS.dark,
   },
-  gap: (v: number) => v * 8,
-};
-
-const premiumTheme = {
-  colors: {
-    ...sharedColors,
-    backgroundColor: sharedColors.barbie,
-    typography: '#76278f',
-    accent: '#000000',
-    test: 'orange',
-  },
+  fonts: sharedFonts,
   gap: (v: number) => v * 8,
 };
 
@@ -58,7 +38,6 @@ type AppBreakpoints = typeof breakpoints;
 type AppThemes = {
   light: typeof lightTheme;
   dark: typeof darkTheme;
-  premium: typeof premiumTheme;
 };
 
 declare module 'react-native-unistyles' {
@@ -74,6 +53,5 @@ StyleSheet.configure({
   themes: {
     light: lightTheme,
     dark: darkTheme,
-    premium: premiumTheme,
   },
 });
