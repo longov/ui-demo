@@ -1,6 +1,11 @@
 // @ts-nocheck
 import { StyleSheet } from 'react-native-unistyles';
-import { BUTTON_COLORS, TEXT_COLOR } from './Styles/Colors';
+import {
+  BACKGROUND,
+  BUTTON_COLORS,
+  ICON_COLOR,
+  TEXT_COLOR,
+} from './Styles/Colors';
 import { FONT_FAMILIES, FONT_WEIGHTS } from './Styles/fonts';
 
 const sharedFonts = {
@@ -10,8 +15,10 @@ const sharedFonts = {
 
 const lightTheme = {
   colors: {
+    BACKGROUND: BACKGROUND.light,
     TEXT: TEXT_COLOR.light,
     BUTTON: BUTTON_COLORS.light,
+    ICON: ICON_COLOR.light,
   },
   fonts: sharedFonts,
   gap: (v: number) => v * 8,
@@ -19,8 +26,10 @@ const lightTheme = {
 
 const darkTheme = {
   colors: {
+    BACKGROUND: BACKGROUND.dark,
     TEXT: TEXT_COLOR.dark,
     BUTTON: BUTTON_COLORS.dark,
+    ICON: ICON_COLOR.dark,
   },
   fonts: sharedFonts,
   gap: (v: number) => v * 8,

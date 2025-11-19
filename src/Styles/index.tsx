@@ -114,10 +114,10 @@ export const ColorsLight = {
 };
 
 export const Font = {
-  SEMI_BOLD: 'MiSansLatin-Semibold',
-  REGULAR: 'MiSansLatin-Regular',
-  MEDIUM: 'MiSansLatin-Medium',
-  BOLD: 'MiSansLatin-Bold',
+  semibold: 'MiSansLatin-Semibold',
+  regular: 'MiSansLatin-Regular',
+  medium: 'MiSansLatin-Medium',
+  bold: 'MiSansLatin-Bold',
 };
 
 // const textTitle = (key: TEXT_TITLE) => {

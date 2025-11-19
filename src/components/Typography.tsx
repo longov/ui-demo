@@ -46,12 +46,12 @@ export const Typography: React.FunctionComponent<TypographyProps> = ({
     isCentered,
   });
 
-  const isUnistylesStyle = guardUnistyles(style);
+  const _UniStyles = guardUnistyles(style);
   //
   // console.log(isUnistylesStyle, '_style');
 
   return (
-    <Text style={[styles.text, styles.color(color), isUnistylesStyle]}>
+    <Text style={[styles.text, styles.color(color), _UniStyles]}>
       {children}
     </Text>
   );
@@ -62,8 +62,8 @@ const styles: UnistylesValues<any> = StyleSheet.create((theme, rt) => ({
     variants: {
       isStrong: {
         true: {
-          fontFamily: theme.fonts.families.bold,
-          fontWeight: theme.fonts.weights.bold,
+          fontFamily: theme.fonts.families.semibold,
+          fontWeight: theme.fonts.weights.semibold,
         },
         default: {
           fontFamily: theme.fonts.families.regular,

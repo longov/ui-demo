@@ -1,6 +1,6 @@
 //@ts-nocheck
 import { Pressable, View } from 'react-native';
-import { COLORS, Typography } from '@coin98/sdk-ui';
+import { COLORS, Typography, Icon, Button } from '@coin98/sdk-ui';
 import { StyleSheet, UnistylesRuntime } from 'react-native-unistyles';
 import '@coin98/sdk-ui/unistyles';
 
@@ -26,16 +26,25 @@ export default function App() {
           dark Theme
         </Typography>
       </Pressable>
+      <Icon name="ic98" size={20} color={COLORS.ICON_PRIMARY} />
+      <Button
+        onPress={() => {}}
+        kind={'inverse'}
+        level={'primary'}
+        disabled
+        size={'tiny'}
+        title={'Submit'}
+      />
     </View>
   );
 }
 
-const styles = StyleSheet.create((theme: any, _rt) => ({
+const styles = StyleSheet.create((theme: any, rt) => ({
   container: {
     flex: 1,
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    backgroundColor: theme.colors.backgroundColor,
+    backgroundColor: theme.colors.BACKGROUND.BACKGROUND_APP,
     paddingHorizontal: theme.gap(2),
     paddingTop: rt.insets.top,
     transform: [

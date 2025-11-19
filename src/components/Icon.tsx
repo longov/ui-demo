@@ -4,18 +4,11 @@
 // @ts-nocheck
 
 import React, { type FC, type JSX } from 'react';
-import coin98FontConfig from '../../fonts/selection.json';
 //@ts-expect-error
-import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
-import { StyleSheet, View } from 'react-native';
-import { convertPxToPt, width } from '../Styles/utils';
-import { useThemeContext } from '../context/ThemeContext';
-
-const Coin98 = createIconSetFromIcoMoon(
-  coin98FontConfig,
-  'icomoon',
-  'icomoon.ttf'
-);
+import { View } from 'react-native';
+import { StyleSheet } from 'react-native-unistyles';
+import { EIcon } from '../Styles/Colors';
+import IconElement from './IconElement';
 
 /**
  * Props interface for Icon component
@@ -30,7 +23,7 @@ const Coin98 = createIconSetFromIcoMoon(
 interface IProps {
   name: string;
   size?: number;
-  color?: keyof typeof Colors | string;
+  color?: keyof typeof EIcon | string;
   background?: keyof typeof Colors | string;
   styleCustom?: object | StyleSheet.NamedStyles<any>;
   //for re-rendering icon in setting theme
@@ -47,51 +40,39 @@ interface IProps {
 const Icon: FC<IProps> = ({
   name,
   size = convertPxToPt(12),
-  color = 'TEXT',
+  color = 'ICON_PRIMARY',
   background,
-  styleCustom,
+  style,
 }: IProps): JSX.Element => {
-  const { useTheme, getThemeMode } = useThemeContext();
-  const styles = useTheme('IconV2', style);
-
-  const Colors = getThemeMode('color');
-
   return (
-    <View style={[styles.container, styleCustom]}>
+    <View style={[styles.container, style]}>
       {background && (
-        <View
-          style={[
-            styles.backgroundContainer,
-            {
-              backgroundColor: Colors[background] || background,
-              left: size / 5,
-              top: size / 5,
-              // top: size / 5,
-              height: size - size / 3,
-              width: size - size / 3,
-            },
-          ]}
-        />
+        <View style={styles.backgroundContainer(size, background)} />
       )}
-      <Coin98 name={name} size={size} color={Colors[color] || color} />
+      <IconElement name={name} size={size} color={color} />
     </View>
   );
 };
 
-const style = StyleSheet.create({
-  backgroundContainer: {
+const styles = StyleSheet.create((theme, rt) => ({
+  backgroundContainer: (size, color) => ({
     overflow: 'hidden',
     position: 'absolute',
-    width: width(2.5),
-    borderRadius: width(100),
+    borderRadius: rt.screen.width,
+    backgroundColor: theme.colors.ICON[color] || theme.colors.ICON.ICON_PRIMARY,
+    left: (rt.fontScale * size) / 5,
+    top: (rt.fontScale * size) / 5,
+    // top: size / 5,
+    height: rt.fontScale * (size - size / 3),
+    width: rt.fontScale * (size - size / 3),
     // height: height(1)
     // left: width(2.7)
     // top: height(0.5)
-  },
+  }),
   container: {
     position: 'relative',
   },
-});
+}));
 
 export default React.memo(Icon);
 
