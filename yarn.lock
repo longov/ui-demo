@@ -1537,6 +1537,7 @@ __metadata:
     "@babel/core": "npm:^7.25.2"
     "@babel/preset-env": "npm:^7.25.3"
     "@babel/runtime": "npm:^7.25.0"
+    "@coin98/sdk-ui": "https://github.com/longov/ui-demo.git"
     "@react-native-community/cli": "npm:20.0.0"
     "@react-native-community/cli-platform-android": "npm:20.0.0"
     "@react-native-community/cli-platform-ios": "npm:20.0.0"
@@ -1556,6 +1557,21 @@ __metadata:
     react-native-vector-icons: "npm:10.3.0"
   languageName: unknown
   linkType: soft
+
+"@coin98/sdk-ui@https://github.com/longov/ui-demo.git":
+  version: 0.1.0
+  resolution: "@coin98/sdk-ui@https://github.com/longov/ui-demo.git#commit=4b30b2afaeeb7885d741fe5022cdb97ea43f30d1"
+  peerDependencies:
+    lottie-react-native: "*"
+    react: "*"
+    react-native: "*"
+    react-native-edge-to-edge: "*"
+    react-native-nitro-modules: ^0.31.6
+    react-native-unistyles: "*"
+    react-native-vector-icons: "*"
+  checksum: 10c0/99ce7aa1a1790df5526b5c15d72f1c06c2ba41d63d31fc5e5f86e7a7ca30a7b73cb812e1d4844f9a798980e1227ee0527725671605493d5d1e8de175cd418fae
+  languageName: node
+  linkType: hard
 
 "@coin98/sdk-ui@workspace:.":
   version: 0.0.0-use.local

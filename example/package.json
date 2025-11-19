@@ -10,6 +10,7 @@
     "build:ios": "react-native build-ios --mode Debug"
   },
   "dependencies": {
+    "@coin98/sdk-ui": "https://github.com/longov/ui-demo.git",
     "@react-native/normalize-colors": "^0.82.1",
     "lottie-react-native": "7.3.4",
     "react": "19.1.0",
@@ -34,6 +35,7 @@
     "react-native-monorepo-config": "^0.1.9"
   },
   "engines": {
-    "node": ">=20"
-  }
+    "node": ">=22"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
