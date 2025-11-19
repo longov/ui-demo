@@ -7,6 +7,8 @@ import {
   TEXT_COLOR,
 } from './Styles/Colors';
 import { FONT_FAMILIES, FONT_WEIGHTS } from './Styles/fonts';
+import { width } from './Styles/utils';
+import { ESpacing } from './Styles';
 
 const sharedFonts = {
   families: FONT_FAMILIES,
@@ -22,6 +24,9 @@ const lightTheme = {
   },
   fonts: sharedFonts,
   gap: (v: number) => v * 8,
+  pWidth: (v: number) => width(v),
+  spacing: ESpacing,
+  flexWidth: (v: number) => width(100) - 2 * v,
 };
 
 const darkTheme = {
@@ -33,6 +38,9 @@ const darkTheme = {
   },
   fonts: sharedFonts,
   gap: (v: number) => v * 8,
+  pWidth: (v: number) => width(v),
+  flexWidth: (v: number) => width(100) - 2 * v,
+  spacing: ESpacing,
 };
 
 const breakpoints = {

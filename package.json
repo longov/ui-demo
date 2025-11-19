@@ -58,6 +58,7 @@
     "type": "git",
     "url": "git+https://github.com/longov/coin98-sdk-ui.git"
   },
+  "private": true,
   "author": "longvo <longvt@coin98.finance> (https://github.com/longov)",
   "license": "MIT",
   "bugs": {

@@ -39,7 +39,7 @@ interface IProps {
  */
 const Icon: FC<IProps> = ({
   name,
-  size = convertPxToPt(12),
+  size = 12,
   color = 'ICON_PRIMARY',
   background,
   style,

@@ -154,7 +154,7 @@ export default Button;
 
 const styles = StyleSheet.create((theme, rt) => ({
   buttonContainer: {
-    width: rt.screen.width * 0.9,
+    width: theme.pWidth(90),
     flexDirection: 'row',
     justifyContent: 'center',
     // marginBottom: GapSize.medium,

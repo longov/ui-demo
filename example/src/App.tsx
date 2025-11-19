@@ -26,13 +26,12 @@ export default function App() {
           dark Theme
         </Typography>
       </Pressable>
-      <Icon name="ic98" size={20} color={COLORS.ICON_PRIMARY} />
+      <Icon name="ic98" size={20} color={COLORS.ICON_BRAND} />
       <Button
         onPress={() => {}}
-        kind={'inverse'}
         level={'primary'}
-        disabled
-        size={'tiny'}
+        style={styles.button}
+        size={'xsmall'}
         title={'Submit'}
       />
     </View>
@@ -45,13 +44,16 @@ const styles = StyleSheet.create((theme: any, rt) => ({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     backgroundColor: theme.colors.BACKGROUND.BACKGROUND_APP,
-    paddingHorizontal: theme.gap(2),
     paddingTop: rt.insets.top,
     transform: [
       {
         translateY: rt.insets.ime * -1,
       },
     ],
+  },
+  button: {
+    width: rt.screen.width - 2 * theme.spacing.space200,
+    marginHorizontal: theme.spacing.space200,
   },
   text: {
     color: theme.colors.TEXT.TEXT_ERROR,
