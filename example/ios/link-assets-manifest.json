@@ -1,0 +1,101 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "../fonts/MiSansLatin-Bold.otf",
+      "sha1": "7daf9c69ea9a93ab033262bdbd816350b98e302f"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Bold.ttf",
+      "sha1": "7d6f4bd6e669d53995cfbf04cf5c96063bee1287"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Demibold.otf",
+      "sha1": "a41817f37bcefb03374294c77a9104aa67945d09"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Demibold.ttf",
+      "sha1": "3ac8b82fed7b57bb2462f7c553534055862dd686"
+    },
+    {
+      "path": "../fonts/MiSansLatin-ExtraLight.otf",
+      "sha1": "bc044dcd16c93e713aaa735d064d74a89d5e06e3"
+    },
+    {
+      "path": "../fonts/MiSansLatin-ExtraLight.ttf",
+      "sha1": "c72cf1fa5cde9acee855510bff06923c6cb124f6"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Heavy.otf",
+      "sha1": "5d7d44b8def2cbf0cabdba4179debcdb8df12ee4"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Heavy.ttf",
+      "sha1": "cc61203d485488cfb5a7953db1f5d580e00df3bc"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Light.otf",
+      "sha1": "7695b7d9e03844c8a16d457eb623ed4f7456cff5"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Light.ttf",
+      "sha1": "fc5e583d2ec0651e2977f3f032abd858e084b73f"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Medium.otf",
+      "sha1": "40b3ce8947e1fa19e97283904f9fa023f6659907"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Medium.ttf",
+      "sha1": "2bfbabe872ab2f688c9b6e9e3b4aed7258c748d3"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Normal.otf",
+      "sha1": "8bb1b3150edbdf9e3b16a94829544ee7fb0d8539"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Normal.ttf",
+      "sha1": "e05495a81a2a5fe67b6ed88bc7c83b44e9c7740a"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Regular.otf",
+      "sha1": "beb77c6fe1f76a8edff80bc1a032193e4bdb61fd"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Regular.ttf",
+      "sha1": "7a350a15d0df1e8e6516ab5604c2a4e3a8f17895"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Semibold.otf",
+      "sha1": "684cd9976e7700a194f737a47a4a9106af388103"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Semibold.ttf",
+      "sha1": "7d42c6bb8c582fa945bf8d7bb12bb58891ce104c"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Thin.otf",
+      "sha1": "6a744f9a62acfcf88dffa50885ccd6dcfbd72945"
+    },
+    {
+      "path": "../fonts/MiSansLatin-Thin.ttf",
+      "sha1": "e4cd38222a7d3a479176864af33b09bc0e424373"
+    },
+    {
+      "path": "../fonts/SF-Pro-Display-Regular.otf",
+      "sha1": "e19df199e78d296e5b6491d4832a76756532ed43"
+    },
+    {
+      "path": "../fonts/SF-Pro-Display-Semibold.otf",
+      "sha1": "1919ecaa21bd612d41f8eeef6ccec2f28ad029f6"
+    },
+    {
+      "path": "../fonts/icomoon.ttf",
+      "sha1": "450aff78cf879df3f1881a0be47e5a16ef736c62"
+    },
+    {
+      "path": "../fonts/selection.json",
+      "sha1": "b9ffe4be9b60445771617e8e079f76075ebf44af"
+    }
+  ]
+}
