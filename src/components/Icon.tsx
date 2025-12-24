@@ -9,6 +9,7 @@ import { View } from 'react-native';
 import { StyleSheet } from 'react-native-unistyles';
 import { EIcon } from '../Styles/Colors';
 import IconElement from './IconElement';
+import type { IconType } from '../constants/icon';
 
 /**
  * Props interface for Icon component
@@ -21,7 +22,7 @@ import IconElement from './IconElement';
  * @property {any} [theme] - Theme value for re-rendering icon when theme changes
  */
 interface IProps {
-  name: string;
+  name: IconType;
   size?: number;
   color?: keyof typeof EIcon | string;
   background?: keyof typeof Colors | string;
@@ -39,7 +40,7 @@ interface IProps {
  */
 const Icon: FC<IProps> = ({
   name,
-  size = 12,
+  size = convertPxToPt(12),
   color = 'ICON_PRIMARY',
   background,
   style,

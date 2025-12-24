@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { type PropsWithChildren, type ReactNode, useState } from 'react';
 import { Pressable, View } from 'react-native';
-import { Typography } from './Typography';
+import Typography from './Typography';
 import { StyleSheet, type UnistylesVariants } from 'react-native-unistyles';
 import { guardUnistyles } from '../Styles/utils';
 
@@ -75,13 +75,13 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   disabled = false,
   level = 'primary',
   kind = 'default',
-  disabledPressBehavior,
   prefixComponent,
   endComponent,
   style,
   textStyle: textSt,
   onPress,
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isPressed, setIsPressed] = useState(false);
 
   styles.useVariants({
@@ -98,19 +98,15 @@ const Button: React.FunctionComponent<ButtonProps> = ({
     if (disabled) return;
     onPress && onPress();
   };
-  const onPressAction = (action: boolean) => () => {
-    if (disabledPressBehavior) return;
-    setIsPressed(action);
-  };
+  // const onPressAction = (action: boolean) => () => {
+  //   if (disabledPressBehavior) return;
+  //   setIsPressed(action);
+  // };
 
-  // @ts-ignore
-  // @ts-ignore
   return (
     <Pressable
       onPress={onPressButton}
       disabled={disabled}
-      onPressIn={onPressAction(true)}
-      onPressOut={onPressAction(false)}
       style={[
         styles.buttonContainer,
         styles.buttonVariant,
@@ -154,7 +150,7 @@ export default Button;
 
 const styles = StyleSheet.create((theme, rt) => ({
   buttonContainer: {
-    width: theme.pWidth(90),
+    width: rt.screen.width * 0.9,
     flexDirection: 'row',
     justifyContent: 'center',
     // marginBottom: GapSize.medium,

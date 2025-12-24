@@ -32,7 +32,7 @@ interface TypographyProps
   style?: any;
 }
 
-export const Typography: React.FunctionComponent<TypographyProps> = ({
+const Typography: React.FunctionComponent<TypographyProps> = ({
   children,
   type = 'medium',
   color = EText.TEXT_PRIMARY,
@@ -56,6 +56,8 @@ export const Typography: React.FunctionComponent<TypographyProps> = ({
     </Text>
   );
 };
+
+export default Typography;
 
 const styles: UnistylesValues<any> = StyleSheet.create((theme, rt) => ({
   text: {

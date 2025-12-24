@@ -26,7 +26,7 @@ import {
 import { EProcess, PROCESS_COLORS } from './Colors/process';
 import FONTS_SIZE from './fontSize';
 import FONTS_WEIGHT from './fontWeight';
-import { ESpacing } from './spacing';
+import { Spacing } from './spacing';
 // @ts-ignore
 
 //Enum for the different TextStyles
@@ -79,7 +79,7 @@ export const COLORS = {
   ...EInputColor,
 };
 
-export { FONTS_SIZE, FONTS_WEIGHT, ESpacing };
+export { FONTS_SIZE, FONTS_WEIGHT, Spacing };
 
 export const Colors = {
   //New Colors

@@ -1,4 +1,4 @@
-export const ESpacing = {
+export const Spacing = {
   space0: 0,
   space12: 1,
   space25: 2,
@@ -23,4 +23,4 @@ export const ESpacing = {
   space1600: 128,
 } as const;
 
-export type ESpacing = (typeof ESpacing)[keyof typeof ESpacing];
+export type SpacingKey = keyof typeof Spacing;

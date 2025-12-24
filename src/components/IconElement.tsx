@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import React, { type FC, type JSX } from 'react';
-import coin98FontConfig from '../../fonts/selection.json';
+import coin98FontConfig from '../assets/fonts/selection.json';
 //@ts-expect-error
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
 import { useUnistyles } from 'react-native-unistyles';

@@ -1,42 +1,29 @@
 //@ts-nocheck
-import { Pressable, View } from 'react-native';
-import { COLORS, Typography, Icon, Button } from '@coin98/sdk-ui';
-import { StyleSheet, UnistylesRuntime } from 'react-native-unistyles';
+import { StyleSheet } from 'react-native-unistyles';
 import '@coin98/sdk-ui/unistyles';
+import HomeScreen from './screens/HomeScreen.tsx';
+import IconScreen from './screens/IconScreen.tsx';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStaticNavigation } from '@react-navigation/native';
+import TokenScreen from './screens/TokenScreen.tsx';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Typography color={COLORS.TEXT_BRAND} value={1.5}>
-        Keyboard insets
-      </Typography>
-      <Pressable onPress={() => UnistylesRuntime.setTheme('light')}>
-        <Typography color={COLORS.TEXT_PRIMARY} type={'xsmall'} isStrong={true}>
-          light Theme
-        </Typography>
-      </Pressable>
-      <Pressable onPress={() => UnistylesRuntime.setTheme('dark')}>
-        <Typography
-          style={[style1, style2]}
-          color={COLORS.TEXT_PRIMARY}
-          type={'xlarge'}
-          isCentered={true}
-          isStrong={true}
-        >
-          dark Theme
-        </Typography>
-      </Pressable>
-      <Icon name="ic98" size={20} color={COLORS.ICON_BRAND} />
-      <Button
-        onPress={() => {}}
-        level={'primary'}
-        style={styles.button}
-        size={'xsmall'}
-        title={'Submit'}
-      />
-    </View>
-  );
+function App() {
+  const RootStack = createNativeStackNavigator({
+    initialRouteName: 'Home',
+    // screenOptions:{ headerShown: false },
+    screens: {
+      Home: HomeScreen,
+      IconScreen: IconScreen,
+      TokenScreen: TokenScreen,
+    },
+  });
+
+  const Navigation = createStaticNavigation(RootStack);
+
+  return <Navigation />;
 }
+
+export default App;
 
 const styles = StyleSheet.create((theme: any, rt) => ({
   container: {

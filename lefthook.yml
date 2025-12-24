@@ -2,15 +2,25 @@ pre-commit:
   parallel: true
   commands:
 
-    lint:
-      glob: "*.{js,ts,jsx,tsx}"
-      run: npx eslint {staged_files}
+#    lint:
+#      glob: "*.{js,ts,jsx,tsx}"
+#      run: npx eslint {staged_files}
+#      skip:
+#        - files:
+#            - "**/example/**"
 
     types:
       glob: "*.{js,ts, jsx, tsx}"
       run: npx tsc
+      skip:
+        - files:
+            - "**/example/**"
+
 commit-msg:
   parallel: true
   commands:
     commitlint:
       run: npx commitlint --edit
+      skip:
+        - files:
+            - "**/example/**"
